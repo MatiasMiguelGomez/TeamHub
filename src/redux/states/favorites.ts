@@ -11,7 +11,7 @@ export const favoriteSlice = createSlice({
     ? JSON.parse(getLocalStorage(LocalStorageTypes.FAVORITES) as string)
     : initialState,
   reducers: {
-    addFavorite: (state, action) => {
+    addFavorite: (_, action) => {
       setLocalStorage(LocalStorageTypes.FAVORITES, action.payload);
       //state es el estado actual de redux, action es el nuevo estado (parecido a la funcion de actualizacion de react, nosotros guardabamos el state anterior no el nuevo)
       return action.payload;

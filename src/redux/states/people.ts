@@ -11,7 +11,7 @@ export const peopleSlice = createSlice({
     ? JSON.parse(getLocalStorage(LocalStorageTypes.PEOPLE) as string)
     : initialState,
   reducers: {
-    addPeople: (state, action) => {
+    addPeople: (_, action) => {
       setLocalStorage(LocalStorageTypes.PEOPLE, action.payload);
       return action.payload;
     },
