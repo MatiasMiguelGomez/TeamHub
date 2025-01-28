@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# Employee Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+A responsive employee management dashboard built with React, Vite, TypeScript, Redux, and Material UI. This application features a sortable table that allows you to manage employees by name, company, job title, and happiness rating. You can also mark employees as favorites for quick access.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Sortable table by:
+  - Name
+  - Company
+  - Job Title
+  - Happiness Rating
+  - Toggle favorite employees to a separate list
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+**React**: for building user interfaces.
+**Redux Toolkit**: for state management.
+**Vite**: for fast development and build processes.
+**TypeScript**: for type safety.
+**Redux**: for state management.
+**Material UI**: for UI components.
+**RxJS**: for reactive programming.
+**Styled-Components**: for styling components.
+**pnpm**: as the package manager.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository:
+   git clone <repository-url>
+2. Navigate to the project directory:
+   cd <project-directory>
+3. Install dependencies using pnpm:
+   pnpm install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Running the Project
+
+To start the development server, run:
+pnpm dev
+
+## Contributing
+
+Feel free to open issues or submit pull requests for improvements!
